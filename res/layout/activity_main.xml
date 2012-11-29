@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/number_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/number_display_default"
+        android:textSize="150sp" />
+    
+    <Button android:id="@+id/titleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="27dp"
+        android:background="@android:color/transparent"
+        android:text="Title Placeholder"
+        android:textColor="#787878" />
+            
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        android:text="@string/incrementText"
+        android:textColor="#787878" />
+    
+    <Button android:id="@+id/incrementButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text=""
+        android:onClick="increment"
+        android:background="@android:color/transparent" />
+
+    <Button
+        android:id="@+id/decrement_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="@string/decrement_button"
+        android:textColor="#787878"
+        android:onClick="decrement"
+        android:background="@android:color/transparent" />
+
+    
+
+</RelativeLayout>

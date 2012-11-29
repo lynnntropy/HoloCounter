@@ -1,0 +1,28 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+	    
+    <EditTextPreference
+        android:capitalize="words"
+        android:defaultValue="1"
+        android:inputType="number"
+        android:key="counter_step"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/settings_setStep" />
+    
+    <EditTextPreference
+        android:capitalize="words"
+        android:defaultValue="No Title"
+        android:inputType="textAutoCorrect"
+        android:key="counter_title"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/settings_setTitle" />
+
+    <!--
+         NOTE: Hide buttons to simplify the UI. Users can touch outside the dialog to
+         dismiss it.
+    -->
+    
+</PreferenceScreen>
