@@ -57,7 +57,16 @@ public boolean onOptionsItemSelected(MenuItem item)
 public void increment(View view)
 {
 	String counter_step = getPreference("counter_step");
-	int counter_step_int = Integer.parseInt(counter_step);
+	int counter_step_int;
+	
+	if(counter_step.equals("Unset"))
+	{
+		counter_step_int = 1;
+	}
+	else
+	{
+		counter_step_int = Integer.parseInt(counter_step);
+	}
 	
 	TextView counterDisplay = (TextView) findViewById(R.id.number_display);
 	
@@ -76,7 +85,16 @@ public void increment(View view)
 public void decrement(View view)
 {
 	String counter_step = getPreference("counter_step");
-	int counter_step_int = Integer.parseInt(counter_step);
+	int counter_step_int;
+	
+	if(counter_step.equals("Unset"))
+	{
+		counter_step_int = 1;
+	}
+	else
+	{
+		counter_step_int = Integer.parseInt(counter_step);
+	}
 	
 	TextView counterDisplay = (TextView) findViewById(R.id.number_display);
 	
@@ -123,6 +141,11 @@ public void setTitle()
 	
 	String titlePreference = getPreference("counter_title");
 	
+	if(titlePreference.equals("Unset"))
+	{
+		titlePreference = "No Title";
+	}
+	
 	if(titlePreference != "No Title" && titlePreference != "" && titlePreference != null)
 	{
 		titleText.setText("Currently counting: " + titlePreference);
@@ -131,5 +154,5 @@ public void setTitle()
 	{
 		titleText.setText(" ");
 	}
-}
+} 
 }
