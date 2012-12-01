@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import com.omegavesko.holocounter.R;
 
 public class MainActivity extends Activity {
 
@@ -110,7 +111,7 @@ TextView counterDisplay = (TextView) findViewById(R.id.number_display);
 public String getPreference(String preference)
 {
 	SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-	String returnString = sharedPref.getString(preference, "<unset>");
+	String returnString = sharedPref.getString(preference, "Unset");
 	
 	return returnString;
 }
